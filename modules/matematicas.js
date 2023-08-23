@@ -15,11 +15,13 @@ const multiply = async(a,b) => {
 
 const divide= async(a,b) => { 
    
-    if (b==0  && a==0) {
-        return "N/A"
-    } else (b==0)
-    
-    return a / b;
+    if (b == 0 && a == 0)  {
+        return "No Aplica";
+    } else if(b==0){
+    return "n/a";
+    }  else {
+        return a / b;
+    }
     
 
 }
