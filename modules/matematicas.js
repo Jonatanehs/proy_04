@@ -18,7 +18,8 @@ const divide = (a, b) => {
   } else if (b == 0) {
     return "n/a";
   } else {
-    return a / b;
+    let divisionTot = a / b;
+    return  divisionTot.toFixed(1);
   }
 }
 

@@ -2,6 +2,8 @@ require('colors');
 
 const matematicas = require('./modules/matematicas.js');
 
+console.clear()
+
 function getRandom() {
   return Math.floor(Math.random() * 10);
 }
@@ -23,25 +25,17 @@ const main = () => {
     const resta = matematicas.substract(numero1, numero2);
     const multiplicacion = matematicas.multiply(numero1, numero2);
     const division = matematicas.divide(numero1, numero2);
-    let divisionResult;
-
-    if (typeof division === 'number') {
-      divisionResult = division.toFixed(1);
-    } else {
-      divisionResult = division;
-    }
     
-
     console.log('+'.green + '  Suma: '.yellow + `${[numero1]}`.red  + ' + ' +  `${[numero2]}`.red 
-        + ' = ' + `${suma}`.red + '             *'.blue);
+        + ' = ' + `${suma} `.red + '            *'.blue);
     console.log('+'.green + '  Resta:'.yellow + `${[numero1]}`.red  + ' - ' +  `${[numero2]}`.red 
         + ' = ' +  `${resta}`.red + '               >'.blue);
     console.log('+'.green + '  Multiplica: '.yellow + `${[numero1]}`.red  + ' * ' +  `${[numero2]}`.red 
-    + ' = ' + `${multiplicacion}`.red +  '    *'.blue);
+    + ' = ' + `${multiplicacion}`.red +  '       *'.blue);
 
     console.log(
       '+'.green + '  Divide: '.yellow + `${[numero1]}`.red  + ' / ' +  `${[numero2]}`.red +
-      ' = ' +  `${divisionResult}`.red + '        *'.blue
+      ' = ' +  `${division}`.red + '          *'.blue
     );
 
     console.log('+++++++++++++++++++++++++++++++++'.green);    
